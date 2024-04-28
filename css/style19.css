@@ -1,0 +1,427 @@
+/*////////////////////////////////////*/
+/*   COLOR PALETTE                    */
+/*////////////////////////////////////*/
+
+:root {
+  --paper-light: #fefbf3;
+  --paper-mid: #eeece1;
+  --paper-dark: #dddacf;
+  --manila-light: #fdeecc;
+  --manila-mid: #ebd5b1;
+  --manila-dark: #b69a74;
+  --Brass-light: #edd977;
+  --Brass-mid: #deba57;
+  --Brass-dark: #aa8b36;
+  --Leather-light: #ce9240;
+  --Leather-mid: #ab7328;
+  --Leather-dark: #8a581d;
+  --wood-light: #764a2f;
+  --wood-mid: #553622;
+  --wood-dark: #35211a;
+  --plant-light: #95a580;
+  --plant-mid: #577251;
+  --plant-dark: #30513d;
+  --wall-light: #546f6b;
+  --wall-mid: #364f4c;
+  --wall-dark: #152a2c;
+}
+
+/*////////////////////////////////////*/
+/*   FONTS & BASE STYLING             */
+/*////////////////////////////////////*/
+body {
+  font-family: "Courier Prime", Courier, monospace;
+  background: linear-gradient(-45deg, var(--wall-dark), var(--plant-dark));
+  height: 100%;
+}
+
+a {
+  color: var(--Leather-dark);
+  text-decoration: none;
+}
+
+/* Set font & weight for all major headings*/
+h1,
+h2,
+h3 {
+  font-family: "Special Elite", "Courier Prime", Courier, monospace;
+  font-weight: 500;
+  color: var(--Leather-dark);
+}
+
+/* Individual header styles */
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--wood-dark);
+}
+
+h2.wall {
+  color: var(--paper-light);
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+/*////////////////////////////////////*/
+/*   STRUCTURAL STYLES                */
+/*////////////////////////////////////*/
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-flow: column nowrap;
+}
+
+/*////////////////////////////////////*/
+/*   HEADER / NAVBAR                  */
+/*////////////////////////////////////*/
+.navBar {
+  position: fixed;
+  width: 100%;
+  background-color: var(--paper-light);
+  z-index: 1;
+  border-bottom: 4px var(--Brass-mid) solid;
+}
+
+.navWrapper {
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin: 0 16px;
+}
+
+nav {
+  justify-content: flex-start;
+  gap: 1vw;
+  width: 100%;
+}
+
+.navLink {
+  font-weight: bold;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 16px 8px;
+}
+
+/* .navLink img {
+  width: 100%;
+  opacity: 1;
+  display: none;
+} */
+
+.logo {
+  height: 24px;
+}
+
+/*////////////////////////////////////*/
+/*   DEFAULT SECTION STYLES           */
+/*////////////////////////////////////*/
+section {
+  padding: 210px 0;
+  overflow: hidden;
+}
+
+section .container {
+  margin: 0 16px;
+}
+
+/*////////////////////////////////////*/
+/*   SECTION THEMES                   */
+/*////////////////////////////////////*/
+section.paper {
+  background: radial-gradient(var(--Brass-mid) 1px, var(--paper-light) 1px);
+  background-size: 32px 32px;
+  background-position: top center;
+  box-shadow: 0px 4px 10px -5px rgba(0, 0, 0, 0.5),
+    0px -4px 10px -5px rgba(0, 0, 0, 0.5);
+}
+
+/*////////////////////////////////////*/
+/*   INTRO SECTION                    */
+/*////////////////////////////////////*/
+#intro .container {
+  display: grid;
+  grid: auto / auto;
+  grid-template-areas:
+    "txt"
+    "skills";
+}
+
+.introTxtWrapper {
+  grid-area: txt;
+}
+
+#typeEffect {
+  color: var(--wood-dark);
+}
+
+.introSkillsWrapper {
+  grid-area: skills;
+}
+
+.introImgWrapper {
+  display: none;
+  grid-area: img;
+  justify-content: center;
+  align-items: center;
+}
+
+.introImgWrapper img {
+  width: 100%;
+}
+
+.skillsGrid {
+  display: grid;
+  grid: 1fr 1fr / 1fr 1fr 1fr;
+}
+
+.skillItem {
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 16px;
+}
+
+.skillItem img {
+  height: 20vw;
+  max-height: 120px;
+}
+
+/*////////////////////////////////////*/
+/*   WORKS SECTION                    */
+/*////////////////////////////////////*/
+.workContainer {
+  display: grid;
+  grid: 1fr / 1fr;
+  grid-template-areas: "list";
+  gap: 32px;
+}
+
+.workList hr {
+  border: 1px dashed var(--plant-mid);
+  width: 100%;
+  margin: 0;
+}
+
+/* .workItemInfo p {
+  color: var(--paper-dark);
+  font-size: 1.25rem;
+} */
+
+.workListItem {
+  display: grid;
+  grid: 1fr / 3fr 1fr;
+  grid-template-areas: "info img";
+  align-items: center;
+  color: var(--paper-dark);
+  gap: 16px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.workItemInfo {
+  grid-area: info;
+}
+
+.workItemInfo a {
+  color: white;
+  cursor: help;
+}
+
+.workItemInfo p {
+  margin-bottom: 0;
+  font-size: 0.75rem;
+}
+
+.workListItem img {
+  grid-area: img;
+  width: 100%;
+  min-width: 64px;
+}
+
+.workDisplayZone {
+  display: none;
+  cursor: help;
+}
+
+/* TEMP */
+.workDisplayWrapper a {
+  color: white;
+}
+
+/*///////////////////////////////////////////////////////////////////////*/
+/*                   ///   ///   ///   ///   ///   ///   ///   ///   /// */
+/*                  ///   ///   ///   ///   ///   ///   ///   ///   ///  */
+/* MEDIA QUERIES   ///   ///   ///   ///   ///   ///   ///   ///   ///   */
+/*                ///   ///   ///   ///   ///   ///   ///   ///   ///    */
+/*               ///   ///   ///   ///   ///   ///   ///   ///   ///     */
+/*///////////////////////////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////////////////////////////*/
+/*   TABLET SM / SCREENS 600px & UP   ///   ///   ///   ///   ///   ///  */
+/*///////////////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 600px) {
+  section .container,
+  .navWrapper {
+    margin: auto;
+    width: 560px;
+  }
+
+  nav {
+    justify-content: space-around;
+    width: auto;
+    gap: 32px;
+  }
+
+  /* Individual header styles */
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  /* INTRO SECTION ////////////////////*/
+  #intro .container {
+    grid: 1fr 2fr / 1fr 1fr;
+    grid-template-areas:
+      "txt txt"
+      "skills img";
+  }
+
+  .skillsGrid {
+    grid: 1fr 1fr 1fr / 1fr 1fr;
+  }
+
+  .skillItem img {
+    max-height: 72px;
+  }
+
+  .introImgWrapper {
+    display: flex;
+  }
+}
+
+/*///////////////////////////////////////////////////////////////////////*/
+/*   TABLET LG / SCREENS 900px & UP   ///   ///   ///   ///   ///   ///  */
+/*///////////////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 900px) {
+  section .container,
+  .navWrapper {
+    width: 856px;
+  }
+
+  #intro .container {
+    grid: 0.5fr 1fr / 2fr 1fr;
+    grid-template-areas:
+      "txt img"
+      "skills img";
+  }
+
+  .skillsGrid {
+    grid: 1fr 1fr / 1fr 1fr 1fr;
+  }
+
+  .skillItem img {
+    max-height: 120px;
+  }
+
+  /* WORKS SECTION ////////////////////*/
+  .workContainer {
+    grid: 1fr / 1fr 2fr;
+    grid-template-areas: "list display";
+  }
+
+  .workListItem {
+    grid: 1fr / 1fr;
+    grid-template-areas: "info";
+    padding: 16px;
+  }
+
+  .workListItem.active {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.25), transparent);
+  }
+
+  .workListItem img {
+    display: none;
+  }
+
+  .workDisplayZone {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+
+  .workDisplayWrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+
+  .workDisplayItem {
+    display: none;
+  }
+
+  .workDisplayItem.active {
+    display: block;
+  }
+}
+
+/*//////////////////////////////////////////////////////////////////////*/
+/*   DESKTOP / SCREENS 1200px & UP   ///   ///   ///   ///   ///   ///  */
+/*//////////////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 1200px) {
+  section .container,
+  .navWrapper {
+    width: 1144px;
+  }
+
+  #intro .container {
+    grid-template-rows: 1fr 1fr;
+  }
+
+  /* Individual header styles */
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  /* WORKS SECTION ////////////////////*/
+  .workListItem {
+    padding: 32px;
+  }
+
+  .workItemInfo a {
+    font-size: 1.5rem;
+  }
+
+  .workItemInfo p {
+    font-size: 1rem;
+  }
+}
+/*///////////////////////////////////////////////*/
+/* END MEDIA QUERIES     ///   ///   ///   ///   */
+/*///////////////////////////////////////////////*/

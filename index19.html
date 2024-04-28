@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nikita's Portfolio</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <!-- style sheets -->
+    <!-- https://github.com/necolas/normalize.css?tab=readme-ov-file -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style19.css" />
+  </head>
+
+  <body>
+    <!---------------------------------------->
+    <!--HEADER NAV---------------------------->
+    <!---------------------------------------->
+    <header class="navBar">
+      <div class="navWrapper flex">
+        <nav class="flex">
+          <a class="navLink flex" href="">
+            <span>About</span>
+            <!-- <img src="images/navSelect1.svg" alt="" /> -->
+          </a>
+
+          <a class="navLink flex" href="">
+            <span>Works</span>
+            <!-- <img src="images/NavSelect2.svg" alt="" /> -->
+          </a>
+
+          <a class="navLink flex" href="">
+            <span>Contact</span>
+            <!-- <img src="images/NavSelect3.svg" alt="" /> -->
+          </a>
+        </nav>
+
+        <img class="logo" src="images/infinitySigv1.svg" alt="" />
+      </div>
+
+      <div class="shading"></div>
+    </header>
+
+    <!---------------------------------------->
+    <!--INTRO SECTION------------------------->
+    <!---------------------------------------->
+    <section id="intro" class="paper">
+      <div class="container">
+        <div class="introTxtWrapper">
+          <h1>HI, I'M NIKITA</h1>
+          <h2>I'm&nbsp;<span id="typeEffect"></span></h2>
+        </div>
+
+        <div class="introSkillsWrapper">
+          <h3>Things I can do:</h3>
+          <div class="skillsGrid">
+            <div class="skillItem flex order">
+              <img src="images/skill-figma.svg" alt="Figma Logo" />
+              <p>Figma</p>
+            </div>
+
+            <div class="skillItem flex">
+              <img src="images/skill-ps.svg" alt="Adobe Photoshop Logo" />
+              <p>Photoshop</p>
+            </div>
+
+            <div class="skillItem flex order">
+              <img src="images/skill-sheets.svg" alt="Google Sheets Logo" />
+              <p>Sheets</p>
+            </div>
+
+            <div class="skillItem flex">
+              <img src="images/skill-html.svg" alt="HTML Logo" />
+              <p>HTML</p>
+            </div>
+
+            <div class="skillItem flex">
+              <img src="images/skill-css.svg" alt="CSS Logo" />
+              <p>CSS</p>
+            </div>
+
+            <div class="skillItem flex">
+              <img src="images/skill-JS.svg" alt="JavaScript Logo" />
+              <p>JS</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="introImgWrapper">
+          <img src="images/introImgPlaceholder.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!---------------------------------------->
+    <!--WORKS SECTION------------------------->
+    <!---------------------------------------->
+    <section id="works">
+      <div class="container">
+        <h2 class="wall">THINGS I'VE WORKED ON</h2>
+        <div class="workContainer">
+          <div class="workList">
+            <hr />
+            <div class="workListItem flex work1 active">
+              <div class="workItemInfo">
+                <a href="">FINAL PROJECT</a>
+                <p>???</p>
+              </div>
+              <img src="images/thumb.png" alt="" />
+            </div>
+
+            <hr />
+            <div class="workListItem flex work2">
+              <div class="workItemInfo">
+                <a href="">Bike Shop Rebrand</a>
+                <p>Website, Branding</p>
+              </div>
+              <img src="images/thumb.png" alt="" />
+            </div>
+
+            <hr />
+            <div class="workListItem flex work3">
+              <div class="workItemInfo">
+                <a href="">THIRDSPACE</a>
+                <p>App, UX/UI</p>
+              </div>
+              <img src="images/thumb.png" alt="" />
+            </div>
+            <hr />
+            <div class="workListItem flex work4">
+              <div class="workItemInfo">
+                <a href="">FCCO Redesign</a>
+                <p>Website, UX/UI</p>
+              </div>
+              <img src="images/thumb.png" alt="" />
+            </div>
+          </div>
+
+          <div class="workDisplayZone">
+            <div class="workDisplayWrapper flex">
+              <a class="workDisplayItem work1 active">
+                work 1
+                <img src="" alt="" />
+              </a>
+
+              <a class="workDisplayItem work2">
+                work 2
+                <img src="" alt="" />
+              </a>
+
+              <a class="workDisplayItem work3">
+                work 3
+                <img src="" alt="" />
+              </a>
+
+              <a class="workDisplayItem work4">
+                work 4
+                <img src="" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!---------------------------------------->
+    <!--MESSAGE SECTION------------------------->
+    <!---------------------------------------->
+    <section id="message" class="paper">
+      <div class="container">
+        <h2>GET IN TOUCH</h2>
+      </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="main19.js"></script>
+  </body>
+</html>
