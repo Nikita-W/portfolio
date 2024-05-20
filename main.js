@@ -25,14 +25,14 @@ const writeLoop = async () => {
       await sleep(sleepTime);
     }
 
-    await sleep(sleepTime * 10);
+    await sleep(sleepTime * 5);
 
     for (let i = curWord.length; i > 0; i--) {
       el.innerText = curWord.substring(0, i - 1);
-      await sleep(sleepTime);
+      await sleep(sleepTime / 2);
     }
 
-    await sleep(sleepTime * 5);
+    await sleep(sleepTime * 2);
 
     if (curPhraseIndex === phrases.length - 1) {
       curPhraseIndex = 0;
